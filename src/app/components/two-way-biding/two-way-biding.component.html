@@ -1,0 +1,23 @@
+<div class="class">
+  <h2>{{ "Two way data biding" | titlecase }}</h2>
+  <form>
+    <label for="nome">Nome: </label>
+    <input
+      type="text"
+      [(ngModel)]="teste"
+      name="nome"
+      placeholder="Digite seu nome"
+    />
+    <label for="password">Senha: </label>
+    <input
+      type="password"
+      name="senha"
+      [(ngModel)]="pass"
+      placeholder="Digite sua senha"
+    />
+    <input type="submit" />
+  </form>
+  <h4 *ngIf="teste !== '' && pass !== ''">
+    O nome é : {{ teste }} com a senha {{ pass }}
+  </h4>
+</div>
